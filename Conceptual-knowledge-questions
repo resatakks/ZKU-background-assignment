@@ -1,0 +1,8 @@
+Q1-What is a smart contract? How are they deployed? You should be able to describe how a smart contract is deployed and the necessary steps.
+A1-Smart contracts are computer programs that can carry out transactions and agreements between anonymous parties in a reliable and consistent manner, and no retrospective change is possible.It is deployed with utilities and applications (hardhat, remix, etc)
+Q2-What is gas? Why is gas optimization such a big focus when building smart contracts?
+A2-On the Ethereum blockchain, gas refers to the cost necessary to perform a transaction on the network.the lower gas we optimize the codes, the more we save
+Q3-What is a hash? Why do people use hashing to hide information?
+A3-A hash function is an algorithm or subroutine that maps variable-length datasets to fixed-length datasets.Because very safe.
+Q4-How would you prove to a colorblind person that two different colored objects are actually of different colors? You could check out Avi Wigderson talk about a similar problem 
+A4-Of course with zero knowledge proof this is very easy and possible
