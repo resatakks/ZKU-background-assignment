@@ -12,9 +12,7 @@ contract Ballot {
         bytes32 name;  
         uint voteCount; 
     }
-
     address public chairperson;
-
     mapping(address => Voter) public voters;
 
     Proposal[] public proposals;
@@ -35,9 +33,7 @@ contract Ballot {
             }));
         }
     }
-
     function giveRightToVote(address voter) external {
-
         require(
             msg.sender == chairperson,
             "Only chairperson can give right to vote."
@@ -62,7 +58,6 @@ contract Ballot {
 
             require(to != msg.sender, "Found loop in delegation.");
         }
-
         sender.voted = true;
         sender.delegate = to;
         Voter storage delegate_ = voters[to];
@@ -70,7 +65,6 @@ contract Ballot {
 
             proposals[delegate_.vote].voteCount += sender.weight;
         } else {
-
             delegate_.weight += sender.weight;
         }
     }
@@ -104,7 +98,7 @@ contract Ballot {
     modifier voteEnded(){
       require(
         block.timestamp < startTime + 5 minutes, 
-        "Voting time has passed");
+  "Voting time has passed");
       _;
-    }
+   }
 }
